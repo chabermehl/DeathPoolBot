@@ -28,4 +28,12 @@ async def on_message(ctx, category: str):
         response = helpers.pretty_print(constants.picks['pick3'])
     await ctx.send(response)
 
+
+@bot.command(name="contribute", brief="Link to GitHub repo. Now accepting PRs")
+async def on_contribute(ctx):
+    helpers.command_logger(ctx.author, 'CONTRIBUTE')
+    embed = discord.Embed(title="GitHub Repository", description="Now accepting PRs!",
+                          url="https://github.com/chabermehl/DeathPoolBot")
+    await ctx.send("https://github.com/chabermehl/DeathPoolBot", embed=embed)
+
 bot.run(TOKEN)

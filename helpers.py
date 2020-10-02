@@ -4,6 +4,9 @@ from tabulate import tabulate
 
 def command_logger(user, command):
     print(f'{user} input {command} @ {datetime.now()}.')
+    f = open("log.txt", "a")
+    f.write(f'{user} input {command} @ {datetime.now()}.\n')
+    f.close()
 
 
 def pretty_print(entries):
