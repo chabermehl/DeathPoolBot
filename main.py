@@ -35,5 +35,6 @@ async def on_contribute(ctx):
     embed = discord.Embed(title="GitHub Repository", description="Now accepting PRs!",
                           url="https://github.com/chabermehl/DeathPoolBot")
     await ctx.send("https://github.com/chabermehl/DeathPoolBot", embed=embed)
+    helpers.process_csv()
 
 bot.run(TOKEN)
