@@ -21,7 +21,7 @@ async def on_ready():
 async def on_message(ctx, category: str):
     helpers.command_logger(ctx.author, f'STANDINGS {category}')
     if category == 'u90':
-        response = helpers.pretty_print(constants.picks['under90'])
+        response = 'Tommy correctly predicted Alex Trebek would be the first under 90 pick to pass and has won 1 beer from all the bois.'
     elif category == 'u40':
         response = helpers.pretty_print(constants.picks['under40'])
     elif category == 'pick3':
